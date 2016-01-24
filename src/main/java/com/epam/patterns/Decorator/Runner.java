@@ -1,4 +1,4 @@
-package com.epam.patterns.Decorator;
+package com.epam.patterns.decorator;
 
 import javax.swing.*;
 import java.awt.*;

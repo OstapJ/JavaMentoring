@@ -1,4 +1,4 @@
-package com.epam.patterns.Adapter;
+package com.epam.patterns.adapter;
 
 import javax.swing.*;
 import java.awt.*;

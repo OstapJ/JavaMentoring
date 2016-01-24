@@ -1,7 +1,7 @@
-package com.epam.patterns.Decorator;
+package com.epam.patterns.decorator;
 
-import com.epam.patterns.Decorator.listener.ButtonToolTipsHighlighterListener;
-import com.epam.patterns.Decorator.listener.ButtonToolTipsListener;
+import com.epam.patterns.decorator.listener.ButtonToolTipsHighlighterListener;
+import com.epam.patterns.decorator.listener.ButtonToolTipsListener;
 
 import javax.swing.*;
 import java.awt.*;
