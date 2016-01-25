@@ -140,6 +140,19 @@ public class KanbanBoard extends JPanel
 		});
 		moveLeft = new JButton(MOVE_LEFT_BUTTON_LABEL);
 		add(moveLeft, new GridBagConstraints());
+		/**
+		 * Swing предостовляет уже готовый адаптер для прослушивание действий мыши.
+		 * Он очень похож на фасад так как агрегирует в себе несколько интерфейсов, но
+		 * в отличии от фасада он использует сущетсвующие интерфейсы, а не определяет новый.
+		 * В моем случае я расширил адаптер вместе со своей функциональностью.
+		 * Конечно можно наваротить свой вариант:
+		 * class KanbanBoardMouseLogic
+		 * class MyMouseAdapter implements MouseListener
+		 * private KanbanBoardMouseLogic kanbanBoardMouseLogic;
+		 * public void mouseClicked(MouseEvent e){
+		 *     kanbanBoardMouseLogic.performLogic();
+		 * }
+		 */
 		moveLeft.addMouseListener(new MouseAdapter()
 		{
 			public void mouseClicked(MouseEvent e)

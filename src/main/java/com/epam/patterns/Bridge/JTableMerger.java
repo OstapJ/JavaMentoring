@@ -5,7 +5,7 @@ import javax.swing.*;
 public class JTableMerger implements ComponentMerger
 {
 
-	@Override public void merge(String[][] array, JComponent component)
+	public void merge(String[][] array, JComponent component)
 	{
 		if(component instanceof JTable)
 		{

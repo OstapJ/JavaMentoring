@@ -29,28 +29,28 @@ public class ButtonToolTipsListener implements MouseListener
 		return String.format(TOOL_TIP_MESSAGE, buttonName);
 	}
 
-	@Override public void mouseClicked(MouseEvent e)
+	public void mouseClicked(MouseEvent e)
 	{
 		outputLabel.setText(String.format(OUTPUT_MESSAGE, buttonName));
 	}
 
-	@Override public void mousePressed(MouseEvent e)
+	public void mousePressed(MouseEvent e)
 	{
 
 	}
 
-	@Override public void mouseReleased(MouseEvent e)
+	public void mouseReleased(MouseEvent e)
 	{
 
 	}
 
-	@Override public void mouseEntered(MouseEvent e)
+	public void mouseEntered(MouseEvent e)
 	{
 		buttonName = e.getComponent().getName();
 		buttonSet.get(buttonName).setToolTipText(createToolTipMessageTemplate(buttonName));
 	}
 
-	@Override public void mouseExited(MouseEvent e)
+	public void mouseExited(MouseEvent e)
 	{
 
 	}

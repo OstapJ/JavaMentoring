@@ -17,7 +17,7 @@ public class AdministrativePanel extends JPanel
 	private JButton dashboardButton;
 	private JButton chartsButton;
 	private JButton galleryButton;
-	private HashMap<String, JButton> buttonSet = new HashMap<>();
+	private HashMap<String, JButton> buttonSet = new HashMap<String, JButton>();
 
 	private JLabel outputLabel;
 

@@ -19,29 +19,29 @@ public class ButtonToolTipsHighlighterListener implements MouseListener
 		this.buttonToolTipsListener = buttonToolTipsListener;
 	}
 
-	@Override public void mouseClicked(MouseEvent e)
+	public void mouseClicked(MouseEvent e)
 	{
 		buttonToolTipsListener.mouseClicked(e);
 	}
 
-	@Override public void mousePressed(MouseEvent e)
+	public void mousePressed(MouseEvent e)
 	{
 
 	}
 
-	@Override public void mouseReleased(MouseEvent e)
+	public void mouseReleased(MouseEvent e)
 	{
 
 	}
 
-	@Override public void mouseEntered(MouseEvent e)
+	public void mouseEntered(MouseEvent e)
 	{
 		buttonToolTipsListener.mouseEntered(e);
 		String buttonName = e.getComponent().getName();
 		buttonToolTipsListener.getButtonSet().get(buttonName).setBackground(Color.yellow);
 	}
 
-	@Override public void mouseExited(MouseEvent e)
+	public void mouseExited(MouseEvent e)
 	{
 		String buttonName = e.getComponent().getName();
 		buttonToolTipsListener.getButtonSet().get(buttonName).setBackground(new Color(238, 238, 238));

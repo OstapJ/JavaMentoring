@@ -5,9 +5,16 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Предстовляет собой обобщенную абстракцию для всех типов панелей.
+ * Абстракция и реализация разделены мостом и независимы друг от друга.
+ * Конструктор принимает {@Link ComponentMerger} который и является реализацией.
+ * Метод {@Link mergeValuesWithComponent} будет использваоться во всей классах
+ * наследниках и предостовлять разную реализацию в зависимости от переданного ComponentMerger
+ */
 public abstract class CustomLabel extends JPanel
 {
-	protected List<ComponentMerger> mergers = new ArrayList<>();
+	protected List<ComponentMerger> mergers = new ArrayList<ComponentMerger>();
 
 	public CustomLabel(ComponentMerger... mergers)
 	{

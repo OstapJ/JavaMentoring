@@ -2,6 +2,9 @@ package com.epam.patterns.bridge;
 
 import javax.swing.*;
 
+/**
+ * Конкретная реализация
+ */
 public class MultiplyElementLabel extends CustomLabel
 {
 	public MultiplyElementLabel(ComponentMerger... mergers)
