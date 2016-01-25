@@ -3,7 +3,7 @@ package com.epam.patterns.bridge;
 import javax.swing.*;
 
 /**
- * Базовый тип для зазличный реализаций "соединителей"
+ * Р‘Р°Р·РѕРІС‹Р№ С‚РёРї РґР»СЏ Р·Р°Р·Р»РёС‡РЅС‹Р№ СЂРµР°Р»РёР·Р°С†РёР№ "СЃРѕРµРґРёРЅРёС‚РµР»РµР№"
  */
 public interface ComponentMerger
 {

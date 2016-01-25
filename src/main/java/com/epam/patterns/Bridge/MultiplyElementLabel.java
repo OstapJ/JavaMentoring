@@ -3,7 +3,7 @@ package com.epam.patterns.bridge;
 import javax.swing.*;
 
 /**
- * Конкретная реализация
+ * РљРѕРЅРєСЂРµС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ
  */
 public class MultiplyElementLabel extends CustomLabel
 {
