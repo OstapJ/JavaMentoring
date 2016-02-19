@@ -1,3 +1,4 @@
 imp.wait = 20
-chromeBinary = C:/Windows/System32/chromedriver.exe
+chromeBinary = E:/C-Track/Drivers/2.15/chromedriver.exe
 baseUrl = http://www.onliner.by/
+maxPoolSize = 2

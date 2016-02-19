@@ -5,7 +5,7 @@ import com.epam.mentoring.pages.MainPage;
 import com.epam.mentoring.utilz.PropertiesProvider;
 import com.epam.mentoring.webdriver.BrowserType;
 import com.epam.mentoring.webdriver.WebDriverFactoryManager;
-import com.epam.mentoring.webdriver.WebDriverWrapper;
+import com.epam.mentoring.webdriver.WebDriverWrapperPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -13,12 +13,11 @@ import org.testng.annotations.*;
 
 import java.io.IOException;
 
-
 public class OnlinerSearchTest {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(OnlinerSearchTest.class);
 
-    WebDriverWrapper driver;
+    WebDriverWrapperPool driver;
     WebDriverFactoryManager manager;
     PropertiesProvider prop;
 
@@ -28,12 +27,12 @@ public class OnlinerSearchTest {
         manager = new WebDriverFactoryManager();
         prop = new PropertiesProvider();
         manager.setChromeBinary(prop.getProperties("chromeBinary"));
+        driver = new WebDriverWrapperPool(2);
     }
 
     @BeforeMethod
-    public void beforeMethod() throws IOException {
-        LOGGER.info("beforeMethod and Thread ID # " + Thread.currentThread().getId());
-        driver = WebDriverWrapper.getInstance("Chrome", manager.createWebDriverFactory(BrowserType.CHROME));
+    public void beforeMethod() throws Exception {
+        driver.getInstance("Chrome", manager.createWebDriverFactory(BrowserType.CHROME));
         String baseUrl = prop.getProperties("baseUrl");
         driver.get(baseUrl);
     }
@@ -44,6 +43,7 @@ public class OnlinerSearchTest {
         MainPage mainPage = new MainPage(driver);
         CatalogPage catalogPage = mainPage.goToMobilePhoneCatalog();
         catalogPage.searchItem("Apple");
+        Thread.sleep(1500);
         Assert.assertTrue(catalogPage.getFoundItem().contains("Apple"), "The found phone is " + catalogPage.getFoundItem());
     }
 
@@ -53,6 +53,7 @@ public class OnlinerSearchTest {
         MainPage mainPage = new MainPage(driver);
         CatalogPage catalogPage = mainPage.goToLaptopCatalog();
         catalogPage.searchItem("Apple");
+        Thread.sleep(1500);
         Assert.assertTrue(catalogPage.getFoundItem().contains("Apple"), "The found laptop is " + catalogPage.getFoundItem());
     }
 
@@ -62,13 +63,18 @@ public class OnlinerSearchTest {
         MainPage mainPage = new MainPage(driver);
         CatalogPage catalogPage = mainPage.goToTabletCatalog();
         catalogPage.searchItem("Apple");
+        Thread.sleep(1500);
         Assert.assertTrue(catalogPage.getFoundItem().contains("Apple"), "The found tablet is " + catalogPage.getFoundItem());
     }
 
+    @AfterMethod
+    public void clearUp() throws Exception {
+        driver.back();
+
+    }
 
     @AfterSuite
-    public void quit() {
-        LOGGER.info("AfterSuite and Thread ID # " + Thread.currentThread().getId());
-        WebDriverWrapper.quitAll();
+    public void quit() throws Exception {
+        driver.quitAll();
     }
 }

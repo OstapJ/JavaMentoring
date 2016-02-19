@@ -14,6 +14,7 @@ public class ChromeWebDriverFactory implements WebDriverFactory {
     @Override
     public synchronized ChromeDriver createWebDriver() {
         DesiredCapabilities chromeCapabilities = DesiredCapabilities.chrome();
+        chromeCapabilities.setCapability("binary", pathToBinary);
         return new ChromeDriver(chromeCapabilities);
     }
 }
