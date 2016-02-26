@@ -1,6 +1,7 @@
 package com.epam.mentoring.memory.task05;
 
 import com.epam.mentoring.memory.task03.Person;
+import org.kohsuke.randname.RandomNameGenerator;
 
 import java.util.*;
 
@@ -13,15 +14,14 @@ import java.util.*;
 public class JavaHeapSpaceErrorRunner
 {
 
-
 	public static void main(String[] args)
 	{
-		String message= "";
-		String result;
+		Stub stub = new Stub();
 
 		while (true){
-			result = message +  new Random().nextInt(10000000);
-			System.out.println(message);
+			Stub next = new Stub();
+			stub.setObj(next);
+			stub = next;
 		}
 
 	}
