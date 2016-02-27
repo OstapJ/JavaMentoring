@@ -1,0 +1,8 @@
+<!--<suite name="Test method Suite" parallel="methods" thread-count="1" >-->
+<suite name="Test method Suite">
+    <test name="MailRu Tests" group-by-instances="true">
+        <classes>
+            <class name="com.epam.jmp.search.OnlinerSearchTest" />
+        </classes>
+    </test>
+</suite>
