@@ -1,4 +1,4 @@
-<suite name="Test method Suite" parallel="methods" thread-count="3" >
+<suite name="Test method Suite" parallel="methods" thread-count="1" >
     <test name="MailRu Tests" group-by-instances="true">
         <classes>
             <class name="com.epam.mentoring.tests.OnlinerSearchTest" />
