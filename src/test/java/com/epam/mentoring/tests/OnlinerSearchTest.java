@@ -27,7 +27,7 @@ public class OnlinerSearchTest {
         manager = new WebDriverFactoryManager();
         prop = new PropertiesProvider();
         manager.setChromeBinary(prop.getProperties("chromeBinary"));
-        driver = new WebDriverWrapperPool(2);
+        driver = new WebDriverWrapperPool(1);
     }
 
     @BeforeMethod
