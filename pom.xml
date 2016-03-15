@@ -10,25 +10,31 @@
 
 	<properties>
 		<surefire.report.version>2.19.1</surefire.report.version>
+		<maven.compiler.version>3.2</maven.compiler.version>
 	</properties>
 
-	<!--<reporting>-->
-		<!--<plugins>-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-surefire-report-plugin</artifactId>-->
-				<!--<version>${surefire.report.version}</version>-->
-			<!--</plugin>-->
-		<!--</plugins>-->
-	<!--</reporting>-->
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>${surefire.report.version}</version>
+			</plugin>
+		</plugins>
+	</reporting>
 
 	<dependencies>
 		<!--<dependency>-->
-			<!--<groupId>org.apache.maven.plugins</groupId>-->
-			<!--<artifactId>maven-surefire-report-plugin</artifactId>-->
-			<!--<version>${surefire.report.version}</version>-->
-			<!--<type>maven-plugin</type>-->
+			<!--<groupId>org.apache.httpcomponents</groupId>-->
+			<!--<artifactId>httpcore</artifactId>-->
+			<!--<version>4.3.3</version>-->
 		<!--</dependency>-->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-report-plugin</artifactId>
+			<version>${surefire.report.version}</version>
+			<type>maven-plugin</type>
+		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -38,6 +44,7 @@
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>2.48.2</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -51,9 +58,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -61,6 +70,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<inherited>true</inherited>
 				<version>2.12.2</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -69,11 +81,11 @@
 			<id>smoke</id>
 			<build>
 				<plugins>
-					<!--<plugin>-->
-						<!--<groupId>org.apache.maven.plugins</groupId>-->
-						<!--<artifactId>maven-surefire-report-plugin</artifactId>-->
-						<!--<version>${surefire.report.version}</version>-->
-					<!--</plugin>-->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-report-plugin</artifactId>
+						<version>${surefire.report.version}</version>
+					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
