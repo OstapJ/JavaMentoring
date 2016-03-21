@@ -1,4 +1,4 @@
-package com.epam.jmp.listener;
+package com.epam.jmp;
 
 /**
  * Class represents the common calculator functionality

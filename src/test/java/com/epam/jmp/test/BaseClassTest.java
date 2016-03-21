@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import com.epam.jmp.listener.Calculator;
+import com.epam.jmp.Calculator;
 
 public class BaseClassTest
 {
