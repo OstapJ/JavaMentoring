@@ -1,13 +1,12 @@
 package com.epam.jmp.test.runner;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.epam.jmp.listener.TestListener;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import org.testng.xml.XmlSuite;
 
-import com.epam.jmp.listener.TestListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestRunner
 {
