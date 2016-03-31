@@ -17,7 +17,7 @@ public class DBSupport
 		{
 			Class.forName(utility.getProperty("connection.driver")).newInstance();
 			statement.executeUpdate(
-					"CREATE TABLE UnitTestCase (id INT, className varchar2(1000), name varchar2(1000), test varchar2(1000), result varchar2(1000), message varchar2(4000), failReason varchar2(1000), evaluation varchar2(1000), time INT)");
+					"CREATE TABLE UnitTestCase (id INT, className varchar(1000), name varchar(1000), test varchar(1000), result BOOLEAN, message varchar(4000), failReason varchar(1000), evaluation varchar(1000), time LONG)");
 			connection.commit();
 		}
 		catch (Exception ex)
@@ -33,7 +33,7 @@ public class DBSupport
 		)
 		{
 			Class.forName(utility.getProperty("connection.driver")).newInstance();
-			statement.executeUpdate("DROP TABLE Persons");
+			statement.executeUpdate("DROP TABLE UnitTestCase");
 			connection.commit();
 		}
 		catch (Exception ex)
