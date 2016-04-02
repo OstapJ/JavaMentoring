@@ -17,7 +17,8 @@ public class DBSupport
 		{
 			Class.forName(utility.getProperty("connection.driver")).newInstance();
 			statement.executeUpdate(
-					"CREATE TABLE UnitTestCase (id INT, className varchar(1000), name varchar(1000), test varchar(1000), result BOOLEAN, message varchar(4000), failReason varchar(1000), evaluation varchar(1000), time LONG)");
+					"CREATE TABLE UnitTestCase (id INT not null primary key, className varchar(1000), testName varchar(1000), description varchar(4000), result varchar(1000), failReason varchar(1000), time INT)");
+//					"CREATE TABLE UnitTestCase (id INT, time INT)");
 			connection.commit();
 		}
 		catch (Exception ex)
