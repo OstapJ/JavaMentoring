@@ -36,6 +36,7 @@ public class Calculator
 		return Math.floor(a * b);
 	}
 
+
 	public long divide(long a, long b)
 	{
 		if (b == 0L)

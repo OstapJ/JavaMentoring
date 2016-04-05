@@ -13,7 +13,7 @@
 		<parameter name="expectedResult" value="10"/>
 
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
+			<class name="com.epam.jmp.CalculatorSimpleOperationTest">
 				<methods>
 					<include name="testSumDoublePositive"/>
 					<include name="testSumLongPositive"/>
@@ -28,7 +28,7 @@
 		<parameter name="expectedResult" value="5"/>
 
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
+			<class name="com.epam.jmp.CalculatorSimpleOperationTest">
 				<methods>
 					<include name="testSubtractDoublePositive"/>
 					<include name="testSubtractLongPositive"/>
@@ -43,7 +43,7 @@
 		<parameter name="expectedResult" value="9"/>
 
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
+			<class name="com.epam.jmp.CalculatorSimpleOperationTest">
 				<methods>
 					<include name="testMultiplyDoublePositive"/>
 					<include name="testMultiplyLongPositive"/>
@@ -58,7 +58,7 @@
 		<parameter name="expectedResult" value="3"/>
 
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
+			<class name="com.epam.jmp.CalculatorSimpleOperationTest">
 				<methods>
 					<include name="testDivideDoublePositive"/>
 					<include name="testDivideLongPositive"/>
@@ -72,7 +72,7 @@
 		<parameter name="secondInput" value="0"/>
 
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
+			<class name="com.epam.jmp.CalculatorSimpleOperationTest">
 				<methods>
 					<include name="testDivideByZeroDoublePositive"/>
 					<include name="testDivideByZeroLongPositive"/>
@@ -87,7 +87,7 @@
 		<parameter name="expectedResult" value="27"/>
 
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorComplexOperationTest">
+			<class name="com.epam.jmp.CalculatorComplexOperationTest">
 				<methods>
 					<include name="testPowerDoublePositive"/>
 				</methods>
@@ -100,7 +100,7 @@
 		<parameter name="expectedResult" value="3"/>
 
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorComplexOperationTest">
+			<class name="com.epam.jmp.CalculatorComplexOperationTest">
 				<methods>
 					<include name="testRootDoublePositive"/>
 				</methods>
@@ -111,7 +111,7 @@
 	<test name="isPrime function doesn't take more than 500 milliseconds">
 		<parameter name="firstInput" value="12343423"/>
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorComplexOperationTest">
+			<class name="com.epam.jmp.CalculatorComplexOperationTest">
 				<methods>
 					<include name="testIsPrimePositive"/>
 				</methods>
@@ -121,7 +121,7 @@
 
 	<test name="Calculate Fibonacci value for the given number">
 		<classes>
-			<class name="com.epam.jmp.test.CalculatorComplexOperationTest">
+			<class name="com.epam.jmp.CalculatorComplexOperationTest">
 				<methods>
 					<include name="testFibonacciPositive"/>
 				</methods>

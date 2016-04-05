@@ -1,12 +1,10 @@
-package com.epam.jmp.test;
-
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
-import static org.hamcrest.MatcherAssert.assertThat;
+package com.epam.jmp;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class CalculatorSimpleOperationTest extends BaseClassTest
 {

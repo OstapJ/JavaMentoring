@@ -2,108 +2,108 @@
 
 <suite name="Negative tests" verbose="1">
 
-	<groups>
-		<run>
-			<include name="negative"/>
-		</run>
-	</groups>
+    <!--<groups>-->
+        <!--<run>-->
+            <!--<include name="negative"/>-->
+        <!--</run>-->
+    <!--</groups>-->
 
-	<test name="Sum two numbers">
-		<parameter name="firstInput" value="5"/>
-		<parameter name="secondInput" value="5"/>
-		<parameter name="expectedResult" value="9"/>
+    <test name="Sum two numbers">
+        <parameter name="firstInput" value="5"/>
+        <parameter name="secondInput" value="5"/>
+        <parameter name="expectedResult" value="9"/>
 
-		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
-				<methods>
-					<include name="testSumDoubleNegative"/>
-					<include name="testSumLongNegative"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <classes>
+            <class name="com.epam.jmp.CalculatorSimpleOperationTest">
+                <methods>
+                    <include name="testSumDoubleNegative"/>
+                    <include name="testSumLongNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-	<test name="Subtract two numbers">
-		<parameter name="firstInput" value="10"/>
-		<parameter name="secondInput" value="5"/>
-		<parameter name="expectedResult" value="4"/>
+    <test name="Subtract two numbers">
+        <parameter name="firstInput" value="10"/>
+        <parameter name="secondInput" value="5"/>
+        <parameter name="expectedResult" value="4"/>
 
-		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
-				<methods>
-					<include name="testSubtractDoubleNegative"/>
-					<include name="testSubtractLongNegative"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <classes>
+            <class name="com.epam.jmp.CalculatorSimpleOperationTest">
+                <methods>
+                    <include name="testSubtractDoubleNegative"/>
+                    <include name="testSubtractLongNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-	<test name="Multiply two numbers">
-		<parameter name="firstInput" value="3"/>
-		<parameter name="secondInput" value="3"/>
-		<parameter name="expectedResult" value="8"/>
+    <test name="Multiply two numbers">
+        <parameter name="firstInput" value="3"/>
+        <parameter name="secondInput" value="3"/>
+        <parameter name="expectedResult" value="8"/>
 
-		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
-				<methods>
-					<include name="testMultiplyDoubleNegative"/>
-					<include name="testMultiplyLongNegative"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <classes>
+            <class name="com.epam.jmp.CalculatorSimpleOperationTest">
+                <methods>
+                    <include name="testMultiplyDoubleNegative"/>
+                    <include name="testMultiplyLongNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-	<test name="Divide two numbers">
-		<parameter name="firstInput" value="9"/>
-		<parameter name="secondInput" value="3"/>
-		<parameter name="expectedResult" value="4"/>
+    <test name="Divide two numbers">
+        <parameter name="firstInput" value="9"/>
+        <parameter name="secondInput" value="3"/>
+        <parameter name="expectedResult" value="4"/>
 
-		<classes>
-			<class name="com.epam.jmp.test.CalculatorSimpleOperationTest">
-				<methods>
-					<include name="testDivideDoubleNegative"/>
-					<include name="testDivideLongNegative"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <classes>
+            <class name="com.epam.jmp.CalculatorSimpleOperationTest">
+                <methods>
+                    <include name="testDivideDoubleNegative"/>
+                    <include name="testDivideLongNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-	<test name="Power two numbers">
-		<parameter name="firstInput" value="0"/>
-		<parameter name="secondInput" value="5"/>
+    <test name="Power two numbers">
+        <parameter name="firstInput" value="0"/>
+        <parameter name="secondInput" value="5"/>
 
-		<classes>
-			<class name="com.epam.jmp.test.CalculatorComplexOperationTest">
-				<methods>
-					<include name="testPowerDoubleNegative"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <classes>
+            <class name="com.epam.jmp.CalculatorComplexOperationTest">
+                <methods>
+                    <include name="testPowerDoubleNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-	<test name="Root from the number">
-		<parameter name="firstInput" value="0"/>
+    <test name="Root from the number">
+        <parameter name="firstInput" value="0"/>
 
-		<classes>
-			<class name="com.epam.jmp.test.CalculatorComplexOperationTest">
-				<methods>
-					<include name="testRootDoubleNegative"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <classes>
+            <class name="com.epam.jmp.CalculatorComplexOperationTest">
+                <methods>
+                    <include name="testRootDoubleNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-	<test name="isPrime function takes less than 10 milliseconds">
-		<parameter name="firstInput" value="12343423"/>
+    <test name="isPrime function takes less than 10 milliseconds">
+        <parameter name="firstInput" value="12343423"/>
 
 
-		<classes>
-			<class name="com.epam.jmp.test.CalculatorComplexOperationTest">
-				<methods>
-					<include name="testIsPrimeNegative"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <classes>
+            <class name="com.epam.jmp.CalculatorComplexOperationTest">
+                <methods>
+                    <include name="testIsPrimeNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 </suite>

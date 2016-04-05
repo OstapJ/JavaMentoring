@@ -1,6 +1,5 @@
-package com.epam.jmp.test.runner;
+package com.epam.jmp.runner;
 
-import com.epam.jmp.db.DBSupport;
 import com.epam.jmp.listener.ISuiteListener;
 import com.epam.jmp.listener.TestListener;
 import org.testng.TestListenerAdapter;
@@ -24,7 +23,7 @@ public class TestRunner
 
 		XmlSuite suite = new XmlSuite();
 		suite.setName("All suites");
-		DBSupport dbSupport = new DBSupport();
+//		DBSupport dbSupport = new DBSupport();
 //		dbSupport.initiateDBStructure();
 //		dbSupport.cleanDB();
 		List<String> files = new ArrayList<>();
